@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		33135B1720F2F33000AE9EE1 /* CommonCryptoModuleMap */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 33135B1A20F2F33000AE9EE1 /* Build configuration list for PBXAggregateTarget "CommonCryptoModuleMap" */;
+			buildPhases = (
+				33135B1B20F2F33E00AE9EE1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CommonCryptoModuleMap;
+			productName = CommonCryptoModuleMap;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B41CAA3D1EB123E80040743A /* MMPixelSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44CEC4B1E96C70800696AD5 /* MMPixelSDKTests.swift */; };
 		B41CAA401EB1246D0040743A /* MMPixelSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44CEC3D1E96C70800696AD5 /* MMPixelSDK.framework */; };
@@ -16,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33135B1C20F2F36600AE9EE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B44CEC341E96C70800696AD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33135B1720F2F33000AE9EE1;
+			remoteInfo = CommonCryptoModuleMap;
+		};
 		B44CEC481E96C70800696AD5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B44CEC341E96C70800696AD5 /* Project object */;
@@ -161,6 +182,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				33135B1D20F2F36600AE9EE1 /* PBXTargetDependency */,
 				B4FCB5441EE9D05100A4C04E /* PBXTargetDependency */,
 			);
 			name = MMPixelSDK;
@@ -214,6 +236,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = MediaMath;
 				TargetAttributes = {
+					33135B1720F2F33000AE9EE1 = {
+						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = 5FQ33QXJZ3;
+						ProvisioningStyle = Automatic;
+					};
 					B44CEC3C1E96C70800696AD5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
@@ -245,6 +272,7 @@
 				B44CEC3C1E96C70800696AD5 /* MMPixelSDK */,
 				B44CEC451E96C70800696AD5 /* MMPixelSDKTests */,
 				B4FCB5351EE9CF1600A4C04E /* CommonCrypto */,
+				33135B1720F2F33000AE9EE1 /* CommonCryptoModuleMap */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +300,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33135B1B20F2F33E00AE9EE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This if-statement means we'll only run the main script if the CommonCryptoModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where CommonCrypto is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B44CEC381E96C70800696AD5 /* Sources */ = {
@@ -302,6 +346,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		33135B1D20F2F36600AE9EE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33135B1720F2F33000AE9EE1 /* CommonCryptoModuleMap */;
+			targetProxy = 33135B1C20F2F36600AE9EE1 /* PBXContainerItemProxy */;
+		};
 		B44CEC491E96C70800696AD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B44CEC3C1E96C70800696AD5 /* MMPixelSDK */;
@@ -315,6 +364,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		33135B1820F2F33000AE9EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FQ33QXJZ3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33135B1920F2F33000AE9EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FQ33QXJZ3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B44CEC4F1E96C70800696AD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -530,6 +597,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33135B1A20F2F33000AE9EE1 /* Build configuration list for PBXAggregateTarget "CommonCryptoModuleMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33135B1820F2F33000AE9EE1 /* Debug */,
+				33135B1920F2F33000AE9EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B44CEC371E96C70800696AD5 /* Build configuration list for PBXProject "MMPixelSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
