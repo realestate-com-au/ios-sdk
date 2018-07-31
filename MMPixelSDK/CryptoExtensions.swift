@@ -10,7 +10,7 @@ import CommonCrypto
 
 extension String {
     
-    func sha256() -> String{
+    public func sha256() -> String{
         if let stringData = self.data(using: String.Encoding.utf8) {
             return hexStringFromData(input: digest(input: stringData as NSData))
         }
