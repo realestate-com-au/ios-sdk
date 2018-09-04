@@ -35,10 +35,6 @@
 		B44CEC571E96C79400696AD5 /* MMPixelSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMPixelSDK.swift; sourceTree = "<group>"; };
 		B44CEC591E96CD1C00696AD5 /* MMPixelConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMPixelConfig.swift; sourceTree = "<group>"; };
 		B49B9C6A1EE9D6C400814E02 /* CryptoExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoExtensions.swift; sourceTree = "<group>"; };
-		B4FCB5391EE9CF1600A4C04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4FCB53E1EE9CF8000A4C04E /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
-		B4FCB53F1EE9CFBF00A4C04E /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
-		B4FCB5401EE9CFD300A4C04E /* iphonesimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphonesimulator.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +61,6 @@
 			children = (
 				B44CEC3F1E96C70800696AD5 /* MMPixelSDK */,
 				B44CEC4A1E96C70800696AD5 /* MMPixelSDKTests */,
-				B4FCB5371EE9CF1600A4C04E /* CommonCrypto */,
 				B44CEC3E1E96C70800696AD5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,17 +94,6 @@
 				B44CEC4D1E96C70800696AD5 /* Info.plist */,
 			);
 			path = MMPixelSDKTests;
-			sourceTree = "<group>";
-		};
-		B4FCB5371EE9CF1600A4C04E /* CommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				B4FCB5391EE9CF1600A4C04E /* Info.plist */,
-				B4FCB53E1EE9CF8000A4C04E /* CommonCrypto.xcconfig */,
-				B4FCB53F1EE9CFBF00A4C04E /* iphoneos.modulemap */,
-				B4FCB5401EE9CFD300A4C04E /* iphonesimulator.modulemap */,
-			);
-			path = CommonCrypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
