@@ -170,11 +170,11 @@
 			};
 			buildConfigurationList = B44CEC371E96C70800696AD5 /* Build configuration list for PBXProject "MMPixelSDK" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = B44CEC331E96C70800696AD5;
 			productRefGroup = B44CEC3E1E96C70800696AD5 /* Products */;
