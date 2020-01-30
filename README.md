@@ -1,6 +1,8 @@
 # iOS-SDK
 A simple framework for firing MediaMath Pixels
 
+TEST
+
 ## Usage
 The SDK has four static reporting functions: 
 * `report(advertiser: Int, pixel: Int, addlParams: String?)`
